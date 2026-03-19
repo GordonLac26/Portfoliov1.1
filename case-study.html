@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gordon Lac — Case Study</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav id="main-nav">
+    <a class="nav-logo" href="index.html">GL</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <a href="work.html" class="case-back">← Back to Work</a>
+
+    <div class="case-hero">
+      <div class="case-meta" id="case-meta"></div>
+      <h1 class="case-title" id="case-title">Project Title</h1>
+    </div>
+
+    <div class="case-cover" id="case-cover"></div>
+
+    <div class="case-body">
+      <aside class="case-sidebar">
+        <div class="case-sidebar-section">
+          <p class="case-sidebar-label">Overview</p>
+          <p class="case-sidebar-text" id="case-overview"></p>
+        </div>
+        <div class="case-sidebar-section">
+          <p class="case-sidebar-label">Role</p>
+          <div class="case-sidebar-tags" id="case-roles"></div>
+        </div>
+        <div class="case-sidebar-section">
+          <p class="case-sidebar-label">Stack / Tools</p>
+          <div class="case-sidebar-tags" id="case-tools"></div>
+        </div>
+      </aside>
+      <div class="case-content" id="case-content"></div>
+    </div>
+
+    <div class="case-next" id="case-next">
+      <div>
+        <p class="case-next-label">Next Project</p>
+        <h3 class="case-next-title" id="case-next-title"></h3>
+      </div>
+      <span class="case-next-arrow">↗</span>
+    </div>
+
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 Gordon Lac. All rights reserved.</p>
+      <p class="footer-name">Gordon Lac</p>
+    </footer>
+
+  </div><!-- /page-wrapper -->
+
+  <script src="shared.js"></script>
+  <script>
+    // ─── CASE DATA ───
+    const cases = {
+      'brand-identity': {
+        title: 'All-In-One Campus app',
+        coverImg: 'figma_cover.png',
+        coverLabel: 'Brand Identity',
+        meta: [
+          { label: 'Year',     value: '2025' },
+          { label: 'Client',   value: 'Independent Label Project' },
+          { label: 'Category', value: 'Design · Branding' }
+        ],
+        overview: 'A cohesive visual identity for a streamlined student events app, centered around a minimalist design with a vibrant color palette and modern typography.',
+        roles: ['Art Direction', 'Brand Design', 'Typography', 'Researcher'],
+        tools: ['Figma', 'Illustrator', 'Photoshop'],
+        sections: [
+          {
+            label: 'The Challenge',
+            title: 'Establishing a Refined Identity',
+            body: 'The objective was to create a premium yet understated app. Every design choice, including colors, typography, and layout, focused on conveying quality through simplicity, unifying all student club events into one comprehensive platform.',
+            sectionImg: 'figma_Layout.png' // 👈 Replace with your image filename
+          },
+          {
+            label: 'The Process',
+            title: 'From concept to system.',
+            body: 'We started with a thorough exploration of typography, ultimately selecting a geometric sans-serif for display and a refined serif for body text. The logo is based on the campus\'s name, shortened and framed to achieve a unique and adaptable design.',
+            sectionImg: 'figma_2.png' // 👈 Replace with your image filename
+          }
+        ],
+        nextCase: 'photo-series',
+        nextTitle: 'Night Film Photography'
+      },
+
+      'photo-series': {
+        title: 'Night Film Photography',
+        coverImg: 'featuredPhoto.jpg',
+        coverLabel: 'Photography',
+        meta: [
+          { label: 'Year',     value: '2025 / 2026' },
+          { label: 'Format',   value: 'Film + Print' },
+          { label: 'Category', value: 'Photography' }
+        ],
+        overview: 'A night-time film series exploring urban architecture through light, shadow, and the spaces in between, shot on medium format.',
+        roles: ['Photography', 'Art Direction', 'Post-production'],
+        tools: ['Mamiya RB67 Pro S <br> w/ 127mm', 'Canon R50 w/ 24mm (scanning)', 'Lightroom'],
+        sections: [
+          {
+            label: 'The Concept',
+            title: 'What the city reveals after dark.',
+            body: 'Shot on film, this series captures how light lingers, fades, and fractures across night streets—embracing grain, shadow, and the quiet atmosphere of the city after hours.',
+            sectionImg: 'night_1.jpg' // 👈 Replace with your image filename
+          },
+          {
+            label: 'The Edit',
+            title: 'A Harmonized Visual Narrative',
+            body: 'All images were graded with enhanced shadows, softened highlights, and a subtle cool tone, ensuring consistency across varying lighting conditions and a unified look in print.',
+            sectionImg: 'night_2.jpg' // 👈 Replace with your image filename
+          }
+        ],
+        nextCase: 'web-app',
+        nextTitle: 'Jenny + David\'s Wedding'
+      },
+
+      'web-app': {
+        title: 'Jenny + David\'s Wedding',
+        coverImg: 'wedding_cover.jpg',
+        coverLabel: 'Web Application',
+        meta: [
+          { label: 'Year',     value: '2026' },
+          { label: 'Format',   value: 'Digital + Film' },
+          { label: 'Category', value: 'Directing · Wedding' }
+        ],
+        overview: 'A tailored wedding designed to maximize personalization and guest impact while operating within a fixed budget.',
+        roles: ['Lead Photographer', 'Director', 'Editor'],
+        tools: ['Canon R50 24mm', 'Bronica ETRSI 50mm', 'Kodak Gold 200'],
+        sections: [
+          {
+            label: 'The Problem',
+            title: 'High expectations, limited resources.',
+            body: 'The client wanted a premium, personalized wedding experience while working within a fixed budget. The challenge was to prioritize spending, balance aesthetics with practicality, and maximize impact without compromising key moments.',
+            sectionImg: 'wedding_1.jpg' // 👈 Replace with your image filename
+          },
+          {
+            label: 'The Build',
+            title: 'Modular, personalized design.',
+            body: 'A flexible planning system allowed for tailored details to be layered onto a cost-controlled foundation. Key moments were customized, while standardized elements were streamlined to maintain efficiency and budget discipline.',
+            sectionImg: 'wedding_2.jpg' // 👈 Replace with your image filename
+          }
+        ],
+        nextCase: 'silence-light',
+        nextTitle: 'Silence & Light'
+      },
+
+      'silence-light': {
+        title: 'Silence & Light',
+        coverImg: '',
+        coverLabel: 'Portrait Photography',
+        meta: [
+          { label: 'Year',     value: '2025' },
+          { label: 'Format',   value: 'Digital' },
+          { label: 'Category', value: 'Photography · Portrait' }
+        ],
+        overview: 'Natural light portrait study conducted across 3 locations, exploring stillness and presence through minimalist composition.',
+        roles: ['Photography', 'Art Direction', 'Retouching'],
+        tools: ['Sony A7IV', 'Lightroom', 'Capture One'],
+        sections: [
+          {
+            label: 'The Concept',
+            title: 'Light as a collaborator.',
+            body: 'Rather than controlling light artificially, the project chases it — golden hour windows, overcast diffusion, and reflected skylight. Each location was chosen for its natural quality of light at a specific time of day.',
+            sectionImg: 'silence-concept.jpg' // 👈 Replace with your image filename
+          },
+          {
+            label: 'The Edit',
+            title: 'Restraint in post-production.',
+            body: 'Processing was kept minimal — skin tones are natural, contrast is gentle, and the edit serves the moment rather than defining it. The goal was invisibility: a grade so subtle the viewer never notices it.',
+            sectionImg: 'silence-edit.jpg' // 👈 Replace with your image filename
+          }
+        ],
+        nextCase: 'editorial-layout',
+        nextTitle: 'Editorial Layout System'
+      },
+
+      'editorial-layout': {
+        title: 'Editorial Layout System',
+        coverImg: '',
+        coverLabel: 'Print Design',
+        meta: [
+          { label: 'Year',     value: '2025' },
+          { label: 'Client',   value: 'Independent Magazine' },
+          { label: 'Category', value: 'Design · Print' }
+        ],
+        overview: 'Grid-based layout series designed for an independent magazine — a rigorous system that brings order to long-form editorial content.',
+        roles: ['Layout Design', 'Art Direction', 'Typography'],
+        tools: ['InDesign', 'Illustrator', 'Figma'],
+        sections: [
+          {
+            label: 'The System',
+            title: 'A grid that holds everything.',
+            body: 'The layout system is built on a 12-column grid with 4 defined layout variants — allowing the editorial team to compose pages quickly without sacrificing visual consistency across every issue.',
+            sectionImg: 'editorial-system.jpg' // 👈 Replace with your image filename
+          },
+          {
+            label: 'Typography',
+            title: 'Hierarchy through type.',
+            body: 'A display serif handles headlines at expressive sizes while a small grotesque manages body copy and captions. The pairing is deliberate: warmth in display, legibility in text, contrast between the two.',
+            sectionImg: 'editorial-typography.jpg' // 👈 Replace with your image filename
+          }
+        ],
+        nextCase: 'archive-platform',
+        nextTitle: 'Archive Web Platform'
+      },
+
+      'archive-platform': {
+        title: 'Archive Web Platform',
+        coverImg: '',
+        coverLabel: 'Full Stack',
+        meta: [
+          { label: 'Year',     value: '2024' },
+          { label: 'Stack',    value: 'Node + PostgreSQL' },
+          { label: 'Category', value: 'Directing · Full Stack' }
+        ],
+        overview: 'A content archive platform with full-text search, tag filtering, and a headless CMS backend — built for a cultural organisation.',
+        roles: ['Full Stack Dev', 'System Design', 'UI Design'],
+        tools: ['Node.js', 'PostgreSQL', 'React', 'Sanity CMS'],
+        sections: [
+          {
+            label: 'The Brief',
+            title: 'Making a decade of content findable.',
+            body: 'The client had 10 years of articles, events, and media with no coherent search or categorisation. The platform was built to surface this content through full-text search, tag filtering, and date-based browsing.',
+            sectionImg: 'archive-brief.jpg' // 👈 Replace with your image filename
+          },
+          {
+            label: 'The Architecture',
+            title: 'Headless and fast.',
+            body: 'Content is managed in Sanity CMS and served via a custom Node.js API layer to a React frontend. PostgreSQL handles full-text indexing server-side. The result is sub-200ms search response times across 4,000+ records.',
+            sectionImg: 'archive-architecture.jpg' // 👈 Replace with your image filename
+          }
+        ],
+        nextCase: 'brand-identity',
+        nextTitle: 'Monochrome Brand System'
+      }
+    };
+
+    // ─── POPULATE PAGE FROM ?case= PARAM ───
+    function loadCase() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('case') || 'brand-identity';
+      const data = cases[id];
+      if (!data) return;
+
+      // Page title
+      document.title = 'Gordon Lac — ' + data.title;
+
+      // Case title
+      document.getElementById('case-title').textContent = data.title;
+
+      // Meta row
+      document.getElementById('case-meta').innerHTML = data.meta.map(m => `
+        <div class="case-meta-item">
+          <p class="case-meta-label">${m.label}</p>
+          <p class="case-meta-value">${m.value}</p>
+        </div>
+      `).join('');
+
+      // Cover image
+      const cover = document.getElementById('case-cover');
+      if (data.coverImg) {
+        cover.innerHTML = `<img src="${data.coverImg}" style="width:100%;height:100%;object-fit:cover;display:block;">`;
+      } else {
+        cover.textContent = data.coverLabel || 'Project Image';
+      }
+
+      // Sidebar
+      document.getElementById('case-overview').textContent = data.overview;
+      document.getElementById('case-roles').innerHTML = data.roles.map(r => `<span class="case-sidebar-tag">${r}</span>`).join('');
+      document.getElementById('case-tools').innerHTML = data.tools.map(t => `<span class="case-sidebar-tag">${t}</span>`).join('');
+
+      // ─── Content sections (each section now has its OWN image) ───
+      document.getElementById('case-content').innerHTML = data.sections.map(s => `
+        <div class="case-section">
+          <p class="case-section-label">${s.label}</p>
+          <h2 class="case-section-title">${s.title}</h2>
+          <p class="case-section-body">${s.body}</p>
+          <div class="case-img-full">
+            ${s.sectionImg
+              ? `<img src="${s.sectionImg}" style="width:100%;height:100%;object-fit:cover;display:block;">`
+              : ''
+            }
+          </div>
+        </div>
+      `).join('');
+
+      // Next project
+      document.getElementById('case-next-title').textContent = data.nextTitle;
+      document.getElementById('case-next').onclick = () => {
+        window.location.href = 'case-study.html?case=' + data.nextCase;
+      };
+    }
+
+    initCursor();
+    initNavScroll();
+    loadCase();
+    initReveal(document);
+  </script>
+</body>
+</html>

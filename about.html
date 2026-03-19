@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gordon Lac — About</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav id="main-nav">
+    <a class="nav-logo" href="index.html">GL</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <div class="about-layout">
+      <div class="about-left">
+        <div class="about-portrait">
+          <img src="z_me.jpg" width="100%">
+        </div>
+        <div style="display:flex;gap:16px;margin-top:8px;">
+          <div style="flex:1;background:var(--gray-100);height:2px;margin-top:12px;"></div>
+          <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray-400);">Gordon Lac</p>
+        </div>
+      </div>
+      <div class="about-right">
+        <p class="about-right-label">About Me</p>
+        <h2 class="about-bio-title">Designer.<br>Shooter.<br>Builder.</h2>
+        <p class="about-bio">
+          I'm Gordon Lac — a multidisciplinary creative working at the intersection of design, photography, and code. My
+          work is driven by a belief that good aesthetics and good function are never in conflict.
+          <br><br>
+          Whether I'm crafting a brand identity, capturing a moment on film, or architecting a web interface, I approach
+          each project with the same rigour: thoughtful, intentional, and built to last.
+        </p>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-title">Designer</span>
+            <span class="skill-card-icon">◎</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Brand Identity</span>
+            <span class="skill-tag">UI/UX</span>
+            <span class="skill-tag">Typography</span>
+            <span class="skill-tag">Print</span>
+            <span class="skill-tag">Motion</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-title">Photographer</span>
+            <span class="skill-card-icon">◉</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Editorial</span>
+            <span class="skill-tag">Portrait</span>
+            <span class="skill-tag">Architecture</span>
+            <span class="skill-tag">Lightroom</span>
+            <span class="skill-tag">Film</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-title">Director</span>
+            <span class="skill-card-icon">◈</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Command</span>
+            <span class="skill-tag">Leadership</span>
+            <span class="skill-tag">Strategic</span>
+            <span class="skill-tag">Visonary Thinking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 Gordon Lac. All rights reserved.</p>
+      <p class="footer-name">Gordon Lac</p>
+    </footer>
+
+  </div><!-- /page-wrapper -->
+
+  <script src="shared.js"></script>
+  <script>
+    initCursor();
+    initNavScroll();
+    initReveal(document);
+  </script>
+</body>
+</html>

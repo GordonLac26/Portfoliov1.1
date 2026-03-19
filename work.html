@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gordon Lac — Work</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav id="main-nav">
+    <a class="nav-logo" href="index.html">GL</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <div class="page-hero">
+      <p class="page-hero-label">Selected Projects</p>
+      <h1 class="page-hero-title">Work</h1>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="photography">Photography</button>
+      <button class="filter-btn" data-filter="Directing">Directing</button>
+    </div>
+
+    <div class="work-grid" id="work-grid">
+
+      <!-- Card 1 — Brand Identity -->
+      <div class="project-card" data-cat="design" onclick="window.location='case-study.html?case=brand-identity'" style="cursor:none;">
+        <div class="project-card-img">
+          <img src="figma_cover.png" alt="figma work cover">
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Design · Branding</p>
+          <h3 class="project-card-title">All-In-One Campus App</h3>
+          <p class="project-card-desc">Full identity system for a minimalist lifestyle label.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+
+      <!-- Card 2 — Photo Series -->
+      <div class="project-card" data-cat="photography" onclick="window.location='case-study.html?case=photo-series'" style="cursor:none;">
+        <div class="project-card-img">
+          <img src="featuredPhoto.jpg" alt="Night Film Photography">
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Photography · Editorial</p>
+          <h3 class="project-card-title">Night Film Photography</h3>
+          <p class="project-card-desc">30-image editorial exploring architectural negative space.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+
+      <!-- Card 3 — Web App -->
+      <div class="project-card" data-cat="Directing" onclick="window.location='case-study.html?case=web-app'" style="cursor:none;">
+        <div class="project-card-img">
+          <img src="Wedding_cover.jpg" alt="Wedding">
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Directing · Wedding</p>
+          <h3 class="project-card-title">Jenny + David's Wedding</h3>
+          <p class="project-card-desc">Data visualisation interface built in React + D3.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+
+      <!-- Card 4 — Silence & Light -->
+      <div class="project-card" data-cat="photography" onclick="window.location='case-study.html?case=silence-light'" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Portraits</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Photography · Portrait</p>
+          <h3 class="project-card-title">Silence &amp; Light</h3>
+          <p class="project-card-desc">Natural light portrait study across 3 locations.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+
+      <!-- Card 5 — Editorial Layout -->
+      <div class="project-card" data-cat="design" onclick="window.location='case-study.html?case=editorial-layout'" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Print</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Design · Print</p>
+          <h3 class="project-card-title">Editorial Layout System</h3>
+          <p class="project-card-desc">Grid-based layout series for an independent magazine.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+
+      <!-- Card 6 — Archive Platform -->
+      <div class="project-card" data-cat="Directing" onclick="window.location='case-study.html?case=archive-platform'" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Full Stack</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Directing · Wedding</p>
+          <h3 class="project-card-title">Archive Web Platform</h3>
+          <p class="project-card-desc">Content archive with search, tagging, and CMS backend.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+
+    </div><!-- /work-grid -->
+
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 Gordon Lac. All rights reserved.</p>
+      <p class="footer-name">Gordon Lac</p>
+    </footer>
+
+  </div><!-- /page-wrapper -->
+
+  <script src="shared.js"></script>
+  <script>
+    initCursor();
+    initNavScroll();
+    initReveal(document);
+
+    // ─── FILTER ───
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('#work-grid .project-card').forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.cat === filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
