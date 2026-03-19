@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gordon Lac — Portfolio</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav id="main-nav">
+    <a class="nav-logo" href="#" onclick="navigate('home'); return false;">GL</a>
+    <ul class="nav-links">
+      <li><a href="#" id="nav-home" class="active" onclick="navigate('home'); return false;">Home</a></li>
+      <li><a href="#" id="nav-work" onclick="navigate('work'); return false;">Work</a></li>
+      <li><a href="#" id="nav-about" onclick="navigate('about'); return false;">About</a></li>
+      <li><a href="#" id="nav-contact" onclick="navigate('contact'); return false;">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ════════════════════════════════ HOME PAGE ════════════════════════════════ -->
+  <div id="page-home" class="page active" style="overflow-y:auto; overflow-x:hidden;">
+
+    <section class="hero">
+      <p class="hero-eyebrow">Portfolio — 2026</p>
+      <h1 class="hero-name">
+        <span class="hero-name-line">Gordon</span>
+        <span class="hero-name-line">Lac</span>
+      </h1>
+      <div class="hero-disciplines">
+        <span class="discipline-tag">Designer</span>
+        <span class="discipline-tag">Photographer</span>
+        <span class="discipline-tag">Programmer</span>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span class="scroll-text">Scroll to explore</span>
+      </div>
+      <span class="hero-number">01</span>
+    </section>
+
+    <div class="marquee-strip">
+      <div class="marquee-inner">
+        <span class="marquee-item">Design</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Photography</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Programming</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Creative Direction</span><span class="marquee-dot"></span>
+        <span class="marquee-item">UI/UX</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Web Development</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Visual Storytelling</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Design</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Photography</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Programming</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Creative Direction</span><span class="marquee-dot"></span>
+        <span class="marquee-item">UI/UX</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Web Development</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Visual Storytelling</span><span class="marquee-dot"></span>
+      </div>
+    </div>
+
+    <div class="about-strip reveal">
+      <div class="about-strip-item">
+        <p class="strip-label">Experience</p>
+        <p class="strip-value">5+</p>
+        <p class="strip-sub">Years creating</p>
+      </div>
+      <div class="about-strip-item">
+        <p class="strip-label">Projects</p>
+        <p class="strip-value">40+</p>
+        <p class="strip-sub">Completed works</p>
+      </div>
+      <div class="about-strip-item">
+        <p class="strip-label">Focus</p>
+        <p class="strip-value">3</p>
+        <p class="strip-sub">Core disciplines</p>
+      </div>
+    </div>
+
+    <div class="section-header reveal">
+      <span class="section-title">Featured Work</span>
+      <a href="#" class="section-link" onclick="navigate('work'); return false;">View all projects →</a>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card reveal" onclick="openCase('brand-identity'); return false;" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Brand Identity</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Design · Branding</p>
+          <h3 class="project-card-title">Monochrome Brand System</h3>
+          <p class="project-card-desc">Full identity system for a minimalist lifestyle label.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+      <div class="project-card reveal" onclick="openCase('photo-series'); return false;" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Photo Series</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Photography · Editorial</p>
+          <h3 class="project-card-title">Urban Geometry Series</h3>
+          <p class="project-card-desc">30-image editorial exploring architectural negative space.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+      <div class="project-card reveal" onclick="openCase('web-app'); return false;" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Web Application</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Programming · Frontend</p>
+          <h3 class="project-card-title">Minimal Dashboard UI</h3>
+          <p class="project-card-desc">Data visualisation interface built in React + D3.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-cta reveal">
+      <h2 class="home-cta-text">Let's build something worth remembering.</h2>
+      <button class="cta-button" onclick="navigate('contact'); return false;">
+        Get in touch &nbsp;→
+      </button>
+    </div>
+
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 Gordon Lac. All rights reserved.</p>
+      <p class="footer-name">Gordon Lac</p>
+    </footer>
+  </div>
+
+  <!-- ════════════════════════════════ WORK PAGE ════════════════════════════════ -->
+  <div id="page-work" class="page" style="overflow-y:auto; overflow-x:hidden;">
+    <div class="page-hero">
+      <p class="page-hero-label">Selected Projects</p>
+      <h1 class="page-hero-title">Work</h1>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="photography">Photography</button>
+      <button class="filter-btn" data-filter="development">Development</button>
+    </div>
+    <div class="work-grid" id="work-grid">
+      <div class="project-card" data-cat="design" onclick="openCase('brand-identity');" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Branding</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Design · Branding</p>
+          <h3 class="project-card-title">Monochrome Brand System</h3>
+          <p class="project-card-desc">Full identity system for a minimalist lifestyle label.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+      <div class="project-card" data-cat="photography" onclick="openCase('photo-series');" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Photography</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Photography · Editorial</p>
+          <h3 class="project-card-title">Urban Geometry Series</h3>
+          <p class="project-card-desc">30-image editorial exploring architectural negative space.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+      <div class="project-card" data-cat="development" onclick="openCase('web-app');" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Web App</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Programming · Frontend</p>
+          <h3 class="project-card-title">Minimal Dashboard UI</h3>
+          <p class="project-card-desc">Data visualisation interface built in React + D3.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+      <div class="project-card" data-cat="photography" onclick="openCase('photo-series');" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Portraits</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Photography · Portrait</p>
+          <h3 class="project-card-title">Silence & Light</h3>
+          <p class="project-card-desc">Natural light portrait study across 3 locations.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+      <div class="project-card" data-cat="design" onclick="openCase('brand-identity');" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Print</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Design · Print</p>
+          <h3 class="project-card-title">Editorial Layout System</h3>
+          <p class="project-card-desc">Grid-based layout series for an independent magazine.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+      <div class="project-card" data-cat="development" onclick="openCase('web-app');" style="cursor:none;">
+        <div class="project-card-img">
+          <div class="project-card-placeholder">Full Stack</div>
+        </div>
+        <div class="project-card-info">
+          <p class="project-card-cat">Programming · Full Stack</p>
+          <h3 class="project-card-title">Archive Web Platform</h3>
+          <p class="project-card-desc">Content archive with search, tagging, and CMS backend.</p>
+          <span class="project-card-arrow">View case study →</span>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 Gordon Lac. All rights reserved.</p>
+      <p class="footer-name">Gordon Lac</p>
+    </footer>
+  </div>
+
+  <!-- ════════════════════════════════ ABOUT PAGE ════════════════════════════════ -->
+  <div id="page-about" class="page" style="overflow-y:auto; overflow-x:hidden;">
+    <div class="about-layout">
+      <div class="about-left">
+        <div class="about-portrait">[ portrait ]</div>
+        <div style="display:flex;gap:16px;margin-top:8px;">
+          <div style="flex:1;background:var(--gray-100);height:2px;margin-top:12px;"></div>
+          <p
+            style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray-400);">
+            Gordon Lac</p>
+        </div>
+      </div>
+      <div class="about-right">
+        <p class="about-right-label">About Me</p>
+        <h2 class="about-bio-title">Designer.<br>Shooter.<br>Builder.</h2>
+        <p class="about-bio">
+          I'm Gordon Lac — a multidisciplinary creative working at the intersection of design, photography, and code. My
+          work is driven by a belief that good aesthetics and good function are never in conflict.
+          <br><br>
+          Whether I'm crafting a brand identity, capturing a moment on film, or architecting a web interface, I approach
+          each project with the same rigour: thoughtful, intentional, and built to last.
+        </p>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-title">Designer</span>
+            <span class="skill-card-icon">◎</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Brand Identity</span>
+            <span class="skill-tag">UI/UX</span>
+            <span class="skill-tag">Typography</span>
+            <span class="skill-tag">Print</span>
+            <span class="skill-tag">Motion</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-title">Photographer</span>
+            <span class="skill-card-icon">◉</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Editorial</span>
+            <span class="skill-tag">Portrait</span>
+            <span class="skill-tag">Architecture</span>
+            <span class="skill-tag">Lightroom</span>
+            <span class="skill-tag">Film</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <span class="skill-card-title">Programmer</span>
+            <span class="skill-card-icon">◈</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 Gordon Lac. All rights reserved.</p>
+      <p class="footer-name">Gordon Lac</p>
+    </footer>
+  </div>
+
+  <!-- ════════════════════════════════ CONTACT PAGE ════════════════════════════════ -->
+  <div id="page-contact" class="page" style="overflow-y:auto; overflow-x:hidden;">
+    <div class="contact-hero">
+      <h1 class="contact-title">Let's<br>Talk.</h1>
+      <p class="contact-subtitle">Open to freelance projects, collaborations, and full-time opportunities. Don't
+        hesitate to reach out.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:gordon@lac.com" class="contact-link-row">
+        <div class="contact-link-left">
+          <span class="contact-link-num">01</span>
+          <div>
+            <p class="contact-link-label">Email</p>
+            <p class="contact-link-name">gordon@lac.com</p>
+          </div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+      <a href="#" class="contact-link-row">
+        <div class="contact-link-left">
+          <span class="contact-link-num">02</span>
+          <div>
+            <p class="contact-link-label">Instagram</p>
+            <p class="contact-link-name">@gordonlac</p>
+          </div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+      <a href="#" class="contact-link-row">
+        <div class="contact-link-left">
+          <span class="contact-link-num">03</span>
+          <div>
+            <p class="contact-link-label">LinkedIn</p>
+            <p class="contact-link-name">Gordon Lac</p>
+          </div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+      <a href="#" class="contact-link-row">
+        <div class="contact-link-left">
+          <span class="contact-link-num">04</span>
+          <div>
+            <p class="contact-link-label">GitHub</p>
+            <p class="contact-link-name">gordonlac</p>
+          </div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+    </div>
+    <footer class="site-footer" style="margin-top:60px;">
+      <p class="footer-copy">© 2026 Gordon Lac. All rights reserved.</p>
+      <p class="footer-name">Gordon Lac</p>
+    </footer>
+  </div>
+
+  <!-- ════════════════════════════════ CASE STUDY TEMPLATE ════════════════════════════════ -->
+  <div id="page-case" class="page" style="overflow-y:auto; overflow-x:hidden;">
+    <a href="#" class="case-back" onclick="navigate('work'); return false;">← Back to Work</a>
+    <div class="case-hero">
+      <div class="case-meta" id="case-meta"></div>
+      <h1 class="case-title" id="case-title">Project Title</h1>
+    </div>
+    <div class="case-cover" id="case-cover">[ Full-width cover image ]</div>
+    <div class="case-body">
+      <aside class="case-sidebar">
+        <div class="case-sidebar-section">
+          <p class="case-sidebar-label">Overview</p>
+          <p class="case-sidebar-text" id="case-overview">Project overview goes here.</p>
+        </div>
+        <div class="case-sidebar-section">
+          <p class="case-sidebar-label">Role</p>
+          <div class="case-sidebar-tags" id="case-roles"></div>
+        </div>
+        <div class="case-sidebar-section">
+          <p class="case-sidebar-label">Stack / Tools</p>
+          <div class="case-sidebar-tags" id="case-tools"></div>
+        </div>
+      </aside>
+      <div class="case-content" id="case-content"></div>
+    </div>
+    <div class="case-next" onclick="openCase('photo-series');">
+      <div>
+        <p class="case-next-label">Next Project</p>
+        <h3 class="case-next-title" id="case-next-title">Urban Geometry Series</h3>
+      </div>
+      <span class="case-next-arrow">↗</span>
+    </div>
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 Gordon Lac. All rights reserved.</p>
+      <p class="footer-name">Gordon Lac</p>
+    </footer>
+  </div>
+
+  <script>
+    // ─── CURSOR ───
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursor-ring');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    function animCursor() {
+      rx += (mx - rx) * 0.13;
+      ry += (my - ry) * 0.13;
+      cursor.style.left = mx + 'px';
+      cursor.style.top = my + 'px';
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animCursor);
+    }
+    animCursor();
+    document.querySelectorAll('a, button, .project-card, .contact-link-row, .case-next')
+      .forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+      });
+
+    // ─── NAV SCROLL ───
+    window.addEventListener('scroll', () => {
+      document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    // ─── WORK FILTER ───
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('#work-grid .project-card').forEach(card => {
+          if (filter === 'all' || card.dataset.cat === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // ─── NAVIGATION ───
+    let current = 'home';
+    function navigate(id) {
+      const prev = document.getElementById('page-' + current);
+      if (prev) {
+        prev.style.opacity = '0';
+        prev.style.transform = 'translateY(16px)';
+        setTimeout(() => { prev.style.display = 'none'; }, 400);
+      }
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      const navEl = document.getElementById('nav-' + (id === 'case' ? 'work' : id));
+      if (navEl) navEl.classList.add('active');
+      current = id;
+      const next = document.getElementById('page-' + id);
+      setTimeout(() => {
+        next.style.display = 'block';
+        next.style.opacity = '0';
+        next.style.transform = 'translateY(16px)';
+        // scroll the page element back to top
+        next.scrollTop = 0;
+        window.scrollTo(0, 0);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            next.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            next.style.opacity = '1';
+            next.style.transform = 'translateY(0)';
+          });
+        });
+        initReveal(next);
+      }, 420);
+    }
+
+    // ─── CASE STUDY DATA ───
+    const cases = {
+      'brand-identity': {
+        title: 'Monochrome Brand System',
+        meta: [
+          { label: 'Year', value: '2025' },
+          { label: 'Client', value: 'Independent Label' },
+          { label: 'Category', value: 'Design · Branding' }
+        ],
+        overview: 'A complete visual identity system for a minimalist lifestyle label, built around a strict monochrome palette and geometric type system.',
+        roles: ['Art Direction', 'Brand Design', 'Typography'],
+        tools: ['Figma', 'Illustrator', 'InDesign'],
+        sections: [
+          {
+            label: 'The Challenge',
+            title: 'Building identity through restraint.',
+            body: 'The client wanted a brand that felt premium without being loud. Every decision — typeface, spacing, paper stock — needed to communicate quality through subtraction rather than addition.'
+          },
+          {
+            label: 'The Process',
+            title: 'From concept to system.',
+            body: 'We began with an extensive type exploration, ultimately landing on a pairing of a geometric sans-serif display with a delicate serif for body copy. The logomark is derived from a single letterform, cropped and rotated to create a mark that is both distinctive and versatile.'
+          }
+        ],
+        nextCase: 'photo-series',
+        nextTitle: 'Urban Geometry Series'
+      },
+      'photo-series': {
+        title: 'Urban Geometry Series',
+        meta: [
+          { label: 'Year', value: '2025' },
+          { label: 'Format', value: 'Digital + Print' },
+          { label: 'Category', value: 'Photography · Editorial' }
+        ],
+        overview: 'A 30-image editorial project documenting architectural negative space across the city — exploring how structures frame absence.',
+        roles: ['Photography', 'Art Direction', 'Post-production'],
+        tools: ['Sony A7IV', 'Lightroom', 'Photoshop'],
+        sections: [
+          {
+            label: 'The Concept',
+            title: 'What buildings choose not to show.',
+            body: 'The series began with a single observation: that the spaces between buildings, the gaps and voids, hold as much visual weight as the structures themselves. The project documents this in 30 frames taken across six locations.'
+          },
+          {
+            label: 'The Edit',
+            title: 'A consistent visual language.',
+            body: 'All images were processed with a shared grade — elevated shadows, compressed highlights, and a faint cool cast — to unify the series across varied lighting conditions and ensure cohesion in print.'
+          }
+        ],
+        nextCase: 'web-app',
+        nextTitle: 'Minimal Dashboard UI'
+      },
+      'web-app': {
+        title: 'Minimal Dashboard UI',
+        meta: [
+          { label: 'Year', value: '2025' },
+          { label: 'Stack', value: 'React + D3' },
+          { label: 'Category', value: 'Programming · Frontend' }
+        ],
+        overview: 'A data visualisation dashboard interface designed and built for a client needing clean, fast access to complex datasets.',
+        roles: ['Frontend Dev', 'UI Design', 'Data Visualisation'],
+        tools: ['React', 'TypeScript', 'D3.js', 'CSS Modules'],
+        sections: [
+          {
+            label: 'The Problem',
+            title: 'Data without noise.',
+            body: 'The client had a dense data set and an existing dashboard that overwhelmed users. The brief was to redesign and rebuild the interface from scratch with a focus on cognitive clarity and visual hierarchy.'
+          },
+          {
+            label: 'The Build',
+            title: 'Performance-first architecture.',
+            body: 'Built in React with TypeScript for full type safety. D3 handles all chart rendering, connected to a live WebSocket feed. Components are lazy-loaded and memoised to keep time-to-interactive under 1.2s even with full data payload.'
+          }
+        ],
+        nextCase: 'brand-identity',
+        nextTitle: 'Monochrome Brand System'
+      }
+    };
+
+    function openCase(id) {
+      const data = cases[id];
+      if (!data) return;
+      // Populate
+      document.getElementById('case-title').textContent = data.title;
+      const metaEl = document.getElementById('case-meta');
+      metaEl.innerHTML = data.meta.map(m => `
+      <div class="case-meta-item">
+        <p class="case-meta-label">${m.label}</p>
+        <p class="case-meta-value">${m.value}</p>
+      </div>
+    `).join('');
+      document.getElementById('case-overview').textContent = data.overview;
+      document.getElementById('case-roles').innerHTML = data.roles.map(r => `<span class="case-sidebar-tag">${r}</span>`).join('');
+      document.getElementById('case-tools').innerHTML = data.tools.map(t => `<span class="case-sidebar-tag">${t}</span>`).join('');
+      const contentEl = document.getElementById('case-content');
+      contentEl.innerHTML = data.sections.map(s => `
+      <div class="case-section">
+        <p class="case-section-label">${s.label}</p>
+        <h2 class="case-section-title">${s.title}</h2>
+        <p class="case-section-body">${s.body}</p>
+        <div class="case-img-full">[ Project image ]</div>
+      </div>
+    `).join('');
+      document.getElementById('case-next-title').textContent = data.nextTitle;
+      const nextBtn = document.querySelector('.case-next');
+      nextBtn.onclick = () => openCase(data.nextCase);
+      navigate('case');
+    }
+
+    // ─── SCROLL REVEAL ───
+    function initReveal(container) {
+      const els = (container || document).querySelectorAll('.reveal');
+      if (!els.length) return;
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(el => obs.observe(el));
+    }
+
+    // ─── SCROLL LISTENER PER PAGE ───
+    // Track scrolled class based on active page scroll
+    function setupPageScroll(pageId) {
+      const page = document.getElementById(pageId);
+      if (!page) return;
+      page.addEventListener('scroll', () => {
+        document.getElementById('main-nav').classList.toggle('scrolled', page.scrollTop > 10);
+      }, { passive: true });
+    }
+    ['home', 'work', 'about', 'contact', 'case'].forEach(p => setupPageScroll('page-' + p));
+
+    // ─── INIT ───
+    initReveal();
+  </script>
+</body>
+
+</html>
