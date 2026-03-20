@@ -8,6 +8,266 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── CONTACT FORM CARD ── */
+    .contact-form-section {
+      padding: 80px 56px 40px !important;
+    }
+
+    .contact-form-card {
+      max-width: 1200px !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+      border: 1px solid #e8e8e8 !important;
+      padding: 64px 72px !important;
+      box-sizing: border-box !important;
+      background: #ffffff !important;
+    }
+
+    .form-card-header {
+      display: flex !important;
+      align-items: baseline !important;
+      justify-content: space-between !important;
+      margin-bottom: 56px !important;
+      padding-bottom: 32px !important;
+      border-bottom: 1px solid #e8e8e8 !important;
+    }
+
+    .form-card-label {
+      font-family: 'IBM Plex Mono', monospace !important;
+      font-size: 0.65rem !important;
+      letter-spacing: 0.22em !important;
+      text-transform: uppercase !important;
+      color: #aaaaaa !important;
+      display: block !important;
+      margin-bottom: 10px !important;
+    }
+
+    .form-card-title {
+      font-family: Montserrat, sans-serif !important;
+      font-weight: 800 !important;
+      font-size: 2rem !important;
+      letter-spacing: -0.03em !important;
+      text-transform: uppercase !important;
+      color: #0a0a0a !important;
+      line-height: 1 !important;
+    }
+
+    .form-card-note {
+      font-family: 'IBM Plex Mono', monospace !important;
+      font-size: 0.68rem !important;
+      letter-spacing: 0.08em !important;
+      color: #aaaaaa !important;
+      text-align: right !important;
+      line-height: 1.6 !important;
+    }
+
+    /* ── FORM GRID ── */
+    .form-grid {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      column-gap: 56px !important;
+      row-gap: 0 !important;
+    }
+
+    .form-field {
+      display: flex !important;
+      flex-direction: column !important;
+      padding: 28px 0 !important;
+      border-bottom: 1px solid #e8e8e8 !important;
+    }
+
+    .form-field.full-width {
+      grid-column: 1 / -1 !important;
+    }
+
+    .form-field label {
+      font-family: 'IBM Plex Mono', monospace !important;
+      font-size: 0.6rem !important;
+      letter-spacing: 0.2em !important;
+      text-transform: uppercase !important;
+      color: #aaaaaa !important;
+      margin-bottom: 12px !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      font-family: 'IBM Plex Mono', monospace !important;
+      font-size: 0.9rem !important;
+      color: #0a0a0a !important;
+      background: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      outline: none !important;
+      width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+      -webkit-appearance: none !important;
+      appearance: none !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      display: block !important;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: #cccccc !important;
+      font-family: 'IBM Plex Mono', monospace !important;
+    }
+
+    .form-field select {
+      cursor: none !important;
+      letter-spacing: 0.04em !important;
+    }
+
+    .form-field select option {
+      background: #ffffff !important;
+      color: #0a0a0a !important;
+    }
+
+    .form-field textarea {
+      resize: none !important;
+      line-height: 1.8 !important;
+      min-height: 100px !important;
+    }
+
+    /* ── FORM FOOTER ── */
+    .form-footer {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding-top: 40px !important;
+      margin-top: 8px !important;
+    }
+
+    .form-footer-note {
+      font-family: 'IBM Plex Mono', monospace !important;
+      font-size: 0.62rem !important;
+      letter-spacing: 0.1em !important;
+      color: #aaaaaa !important;
+      max-width: 320px !important;
+      line-height: 1.7 !important;
+    }
+
+    .form-submit-btn {
+      font-family: 'IBM Plex Mono', monospace !important;
+      font-size: 0.7rem !important;
+      letter-spacing: 0.18em !important;
+      text-transform: uppercase !important;
+      color: #0a0a0a !important;
+      background: transparent !important;
+      border: 1px solid #0a0a0a !important;
+      padding: 16px 40px !important;
+      cursor: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      transition: background 0.25s, color 0.25s !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      outline: none !important;
+      -webkit-appearance: none !important;
+      appearance: none !important;
+    }
+
+    .form-submit-btn:hover {
+      background: #f5f5f5 !important;
+    }
+
+    .btn-arrow {
+      display: inline-block !important;
+      transition: transform 0.25s !important;
+      font-size: 1rem !important;
+    }
+
+    .form-submit-btn:hover .btn-arrow {
+      transform: translate(4px, -4px) !important;
+    }
+
+    /* ── SUCCESS STATE ── */
+    .form-success {
+      display: none !important;
+      text-align: center !important;
+      padding: 80px 40px !important;
+    }
+
+    .form-success.visible {
+      display: block !important;
+    }
+
+    .success-icon {
+      font-family: 'IBM Plex Mono', monospace !important;
+      font-size: 2rem !important;
+      color: #0a0a0a !important;
+      margin-bottom: 24px !important;
+      display: block !important;
+    }
+
+    .success-title {
+      font-family: Montserrat, sans-serif !important;
+      font-weight: 800 !important;
+      font-size: 1.8rem !important;
+      letter-spacing: -0.03em !important;
+      text-transform: uppercase !important;
+      color: #0a0a0a !important;
+      margin-bottom: 12px !important;
+    }
+
+    .success-sub {
+      font-family: 'IBM Plex Mono', monospace !important;
+      font-size: 0.72rem !important;
+      color: #aaaaaa !important;
+      letter-spacing: 0.08em !important;
+      line-height: 1.8 !important;
+    }
+
+    /* ── ERROR STATE ── */
+    .form-error-msg {
+      display: none !important;
+      font-family: 'IBM Plex Mono', monospace !important;
+      font-size: 0.65rem !important;
+      letter-spacing: 0.1em !important;
+      color: #cc0000 !important;
+      margin-top: 20px !important;
+      text-align: center !important;
+    }
+
+    .form-error-msg.visible {
+      display: block !important;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .contact-form-section {
+        padding: 60px 28px 40px !important;
+      }
+      .contact-form-card {
+        padding: 40px 28px !important;
+      }
+      .form-grid {
+        grid-template-columns: 1fr !important;
+        column-gap: 0 !important;
+      }
+      .form-card-header {
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+      .form-card-note {
+        text-align: left !important;
+      }
+      .form-footer {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 28px !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -27,33 +287,35 @@
 
   <div class="page-wrapper">
 
+    <!-- ─── HERO ─── -->
     <div class="contact-hero">
       <h1 class="contact-title">Let's<br>Talk.</h1>
       <p class="contact-subtitle">Open to freelance projects, collaborations, and full-time opportunities. Don't hesitate to reach out.</p>
     </div>
 
+    <!-- ─── CONTACT LINKS ─── -->
     <div class="contact-links">
-      <a href="mailto:gordon@lac.com" class="contact-link-row">
+      <a href="mailto:gordonlac795@gmail.com" class="contact-link-row">
         <div class="contact-link-left">
           <span class="contact-link-num">01</span>
           <div>
             <p class="contact-link-label">Email</p>
-            <p class="contact-link-name">gordon@lac.com</p>
+            <p class="contact-link-name">gordonlac795@gmail.com</p>
           </div>
         </div>
         <span class="contact-link-arrow">↗</span>
       </a>
-      <a href="#" class="contact-link-row">
+      <a href="https://www.instagram.com/glacfilm/" target="_blank" class="contact-link-row">
         <div class="contact-link-left">
           <span class="contact-link-num">02</span>
           <div>
             <p class="contact-link-label">Instagram</p>
-            <p class="contact-link-name">@gordonlac</p>
+            <p class="contact-link-name">@glacfilm</p>
           </div>
         </div>
         <span class="contact-link-arrow">↗</span>
       </a>
-      <a href="#" class="contact-link-row">
+      <a href="https://www.linkedin.com/in/gordon-lac-743646339/" target="_blank" class="contact-link-row">
         <div class="contact-link-left">
           <span class="contact-link-num">03</span>
           <div>
@@ -63,18 +325,100 @@
         </div>
         <span class="contact-link-arrow">↗</span>
       </a>
-      <a href="#" class="contact-link-row">
-        <div class="contact-link-left">
-          <span class="contact-link-num">04</span>
-          <div>
-            <p class="contact-link-label">GitHub</p>
-            <p class="contact-link-name">gordonlac</p>
-          </div>
-        </div>
-        <span class="contact-link-arrow">↗</span>
-      </a>
     </div>
 
+    <!-- ─── CONTACT FORM ─── -->
+    <div class="contact-form-section">
+      <div class="contact-form-card">
+
+        <!-- Card Header -->
+        <div class="form-card-header">
+          <div>
+            <span class="form-card-label">04 — Direct Message</span>
+            <h2 class="form-card-title">Send a Message</h2>
+          </div>
+          <p class="form-card-note">
+            Typically responds within<br>24–48 hours.
+          </p>
+        </div>
+
+        <!-- Form Body -->
+        <form id="contact-form" action="https://formspree.io/f/maqpvrbr" method="POST" novalidate>
+
+          <div class="form-grid">
+
+            <!-- Name -->
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <!-- Subject -->
+            <div class="form-field">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option value="Freelance Project">Freelance Project</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="Full-Time Opportunity">Full-Time Opportunity</option>
+                <option value="Wedding / Event">Wedding / Event</option>
+                <option value="Commercial Shoot">Commercial Shoot</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Budget -->
+            <div class="form-field">
+              <label for="budget">Budget Range</label>
+              <select id="budget" name="budget">
+                <option value="" disabled selected>Select a range</option>
+                <option value="Under $500">Under $500</option>
+                <option value="$500 – $1,500">$500 – $1,500</option>
+                <option value="$1,500 – $5,000">$1,500 – $5,000</option>
+                <option value="$5,000+">$5,000+</option>
+                <option value="Let's discuss">Let's discuss</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="form-field full-width">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, timeline, and any other details..." required></textarea>
+            </div>
+
+          </div><!-- /form-grid -->
+
+          <!-- Form Footer -->
+          <div class="form-footer">
+            <p class="form-footer-note">
+              Your information is never shared with third parties.
+            </p>
+            <button type="submit" class="form-submit-btn">
+              Send Message <span class="btn-arrow">↗</span>
+            </button>
+          </div>
+
+          <p class="form-error-msg" id="form-error">Something went wrong. Please try again or email directly.</p>
+
+        </form>
+
+        <!-- Success State -->
+        <div class="form-success" id="form-success">
+          <span class="success-icon">✓</span>
+          <p class="success-title">Message Sent</p>
+          <p class="success-sub">Thanks for reaching out.<br>I'll be in touch within 24–48 hours.</p>
+        </div>
+
+      </div>
+    </div><!-- /contact-form-section -->
+
+    <!-- ─── FOOTER ─── -->
     <footer class="site-footer" style="margin-top:60px;">
       <p class="footer-copy">© 2026 Gordon Lac. All rights reserved.</p>
       <p class="footer-name">Gordon Lac</p>
@@ -86,6 +430,42 @@
   <script>
     initCursor();
     initNavScroll();
+
+    // ── FORM SUBMISSION ──
+    const form = document.getElementById('contact-form');
+    const successBox = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const btn = form.querySelector('.form-submit-btn');
+      btn.textContent = 'Sending...';
+      btn.style.setProperty('opacity', '0.6', 'important');
+      btn.style.setProperty('pointer-events', 'none', 'important');
+      errorMsg.classList.remove('visible');
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.setProperty('display', 'none', 'important');
+          successBox.classList.add('visible');
+          successBox.style.setProperty('display', 'block', 'important');
+        } else {
+          throw new Error('Server error');
+        }
+      } catch {
+        errorMsg.classList.add('visible');
+        btn.innerHTML = 'Send Message <span class="btn-arrow">↗</span>';
+        btn.style.setProperty('opacity', '1', 'important');
+        btn.style.setProperty('pointer-events', 'auto', 'important');
+      }
+    });
   </script>
 </body>
 </html>
