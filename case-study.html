@@ -222,28 +222,106 @@
     const cases = {
       'brand-identity': {
         title: 'All-In-One Campus app',
-        coverImg: 'figma_cover.png',
+        coverImg: 'figma_mockup.png',
         coverLabel: 'Brand Identity',
         meta: [
           { label: 'Year',     value: '2025' },
           { label: 'Client',   value: 'Independent Label Project' },
-          { label: 'Category', value: 'Design · Branding' }
+          { label: 'Category', value: 'Case Study · Design' }
         ],
         overview: 'A cohesive visual identity for a streamlined student events app, centered around a minimalist design with a vibrant color palette and modern typography.',
         roles: ['Art Direction', 'Brand Design', 'Typography', 'Researcher'],
         tools: ['Figma', 'Illustrator', 'Photoshop'],
         sections: [
           {
-            label: 'The Challenge',
-            title: 'Establishing a Refined Identity',
-            body: 'The objective was to create a premium yet understated app. Every design choice, including colors, typography, and layout, focused on conveying quality through simplicity, unifying all student club events into one comprehensive platform.',
-            sectionImg: 'figma_Layout.png'
+            label: '1. Problem',
+            title: 'Problem Statement',
+            body: 'Imagine you’re a student finishing up your classes, looking for something fun to do. You check social media and the WUSA website, but event information is scattered, inconsistent, and often unclear. You’re left unsure which events are actually happening, which ones you can attend, and which are worth your time — turning a simple decision into a frustrating experience. <br><br><strong>Goal:</strong> Create a inclusive app designed for students where campus events information is easily accessible without any confusion.',
+            sectionImg: 'figma_cover.png'
           },
           {
-            label: 'The Process',
-            title: 'From concept to system.',
-            body: 'We started with a thorough exploration of typography, ultimately selecting a geometric sans-serif for display and a refined serif for body text. The logo is based on the campus\'s name, shortened and framed to achieve a unique and adaptable design.',
+            label: '2. Research (2.1 - 2.2)',
+            title: '2.1: User Research',
+            body: 'This brings us into our researching process, where before we can finalize a design direction, we focused on understanding what students actually value in a campus events app. Through user interviews and analysis of collected insights, several recurring issues emerged in existing solutions:<br><br>&emsp;- Cluttered interfaces, often characterized by excessive visual elements and overwhelming layouts<br>&emsp;- Limited filtering capabilities, making it difficult to sort events by date, faculty, or personal interest<br>&emsp;- Poor information architecture, with events frequently buried under multiple layers of navigation',
             sectionImg: 'figma_2.png'
+          },
+          {
+            label: ' ',
+            title: '2.2: Competitive Research',
+            body: 'To better understand how existing platforms support event discovery, I analyzed several widely used event-based applications. The goal was to identify common patterns, strengths, and gaps that could inform my design decisions. Here are the two most popular sites for event discovery: <br><br><strong><u>Eventbrite</u></strong><br>Strengths<br>&emsp;- Strong filtering and categorization<br>&emsp;- Clean event detail pages<br>Weaknesses<br>&emsp;- Not tailored to campus-specific needs<br>&emsp;- Overwhelming number of public events<br><br>',
+            sectionImg: 'eventbrite_home.png'
+          },
+          {
+            label: ' ',
+            title: ' ',
+            body: '<strong><u>Facebook Events</u></strong><br>Strengths<br>&emsp;- Social integration (see what friends attend)<br>&emsp;- Familiar interface (easy to use)<br>Weaknesses<br>&emsp;- Cluttered feed<br>&emsp;- Events can easily get lost among the other events listed',
+            sectionImg: 'facebook_home.png'
+          },
+          {
+            label: ' ',
+            title: 'Key Findings',
+            body: '&emsp;1. Students rely on multiple platforms to discover campus events.<br>&emsp;2. Event information is often difficult to find due to cluttered interfaces.<br>&emsp;3. Filtering options are either limited or not easily accessible.<br>&emsp;4. Existing platforms are not tailored specifically to campus needs.<br>&emsp;5. Event discovery is often passive rather than personalized.',
+           
+          },
+          {
+            label: '3. Design Process (3.1 - 3.3)',
+            title: '3.1 Approach',
+            body: 'I began by focusing on simplifying event discovery by reducing clutter, improving navigation, and making relevant events easier to find. These were the biggest and most recurring issues that the students have dealt with, placing them at the top of our priority.',
+            sectionImg: ''
+          },
+          {
+            label: ' ',
+            title: '3.2 Exploration',
+            body: 'Initial low-fidelity sketches were used to explore different ways of organizing event information, with a focus on a centralized event feed and intuitive filtering.',
+            sectionImg: 'lowsketch_1.png'
+          },
+          {
+            label: ' ',
+            title: ' ',
+            body: ' ',
+            sectionImg: 'lowsketch_2.png'
+          },
+          {
+            label: ' ',
+            title: ' ',
+            body: ' ',
+            sectionImg: 'lowsketch_3.png'
+          },
+          {
+            label: ' ',
+            title: '3.3 Iteration & Prototyping',
+            body: 'These concepts were refined into high-fidelity designs, prioritizing a clean layout, clear information hierarchy, and quick access to key features. The final direction emphasizes simplicity, accessibility, and personalization.<br><br>' +
+            '<a href="https://www.figma.com/proto/ntj5l0ZGQpKq8YX9NvrbnO/GBDA-210-Final-Project--Copy-?page-id=616%3A161&node-id=616-365&p=f&viewport=193%2C376%2C0.07&t=kuPWqrnn18xGbtI3-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=616%3A342" target="_blank" rel="noopener noreferrer">View Figma Prototype →</a>' + '<br><br>' +
+            '<a href="https://www.figma.com/design/6HmXn9AyQqWTK1wY1QdEPi/GBDA-210-Final-Project--Copy-?node-id=616-161&t=LRFWJWTrwHlck7s6-1" target="_blank" rel="noopener noreferrer">View Figma File →</a>',            
+            sectionImg: ''
+          },
+          {
+            label: '4. Feedback',
+            title: 'Feedback',
+            body: 'User feedback was generally positive, with strong reactions to the simplified layout and improved event discoverability. The main critique centered around adding more personalization features and increasing visibility of key event details within the main feed. Overall, the feedback validated the focus on clarity and navigation while highlighting areas for further refinement.',
+            sectionImg: ''
+          },
+          {
+            label: '5. Reflection',
+            title: 'Whats next',
+            body: 'This project highlighted how much clarity and hierarchy impact decision-making in event discovery. Moving forward, I would focus on deeper personalization and testing the system with a wider student base to better understand how different users interact with campus information.'  + '<br><br>Improvements for later projects: <br> - add more personalization features<br> - Increase visibility of key events',
+            sectionImg: ''
+          },
+          {
+            
+            label: '',
+            title: 'Gallery',
+            body: '',
+            galleryImgs: [
+              'figma_cover.png',
+              'figma_2.png',
+              'eventbrite_home.png',
+              'facebook_home.png',
+              'lowsketch_1.png',
+              'lowsketch_2.png',
+              'lowsketch_3.png'
+              
+            ]
           }
         ],
         nextCase: 'photo-series',
@@ -318,7 +396,7 @@
             sectionImg: 'wedding_2.jpg'
           },
           {
-            // ✅ CHANGED — gallery section uses array instead of duplicate keys
+            
             label: 'The Gallery',
             title: 'Elegant, Personalized Wedding Moments.',
             body: 'This gallery captures personalized wedding moments, showcasing unique details that reflect the couple\'s vision.',
@@ -335,100 +413,155 @@
         ],
 
         
-        nextCase: 'brand-identity',  // CHANGE THIS WHEN MORE PROJECTS ARE ADDED ---------------------------------------------------
-        nextTitle: 'All-In-One Campus app' // CHANGE THIS WHEN MORE PROJECTS ARE ADDED ---------------------------------------------------
+        nextCase: 'silence-light',  // CHANGE THIS WHEN MORE PROJECTS ARE ADDED ---------------------------------------------------
+        nextTitle: 'Brand Redesign' // CHANGE THIS WHEN MORE PROJECTS ARE ADDED ---------------------------------------------------
 
           
       },
 
       'silence-light': {
-        title: 'Silence & Light',
-        coverImg: '',
-        coverLabel: 'Portrait Photography',
+        title: 'Brand Redesign',
+        coverImg: 'habitant_mockup.png',
+        coverLabel: 'Brand Redesign',
         meta: [
           { label: 'Year',     value: '2025' },
-          { label: 'Format',   value: 'Digital' },
-          { label: 'Category', value: 'Photography · Portrait' }
+          { label: 'Client',   value: 'Independent Label Project' },
+          { label: 'Category', value: 'Digital Work · Design' }
         ],
         overview: 'Natural light portrait study conducted across 3 locations, exploring stillness and presence through minimalist composition.',
-        roles: ['Photography', 'Art Direction', 'Retouching'],
-        tools: ['Sony A7IV', 'Lightroom', 'Capture One'],
+        roles: ['Lead Designer', 'Researcher'],
+        tools: ['Illustrator', 'Photoshop'],
         sections: [
           {
-            label: 'The Concept',
-            title: 'Light as a collaborator.',
-            body: 'Rather than controlling light artificially, the project chases it — golden hour windows, overcast diffusion, and reflected skylight. Each location was chosen for its natural quality of light at a specific time of day.',
-            sectionImg: 'silence-concept.jpg'
+            label: 'The Issue',
+            title: 'Out of Date Design',
+            body: 'Habitant soups are known for their traditional recipes and Canadian heritage, but as other brands adopt more modern packaging, Habitant’s design can appear outdated and unchanged. This may make the product less appealing to newer consumers and less noticeable on crowded store shelves.<br><br><em>This photo shows the top portion of the soup shelf</em>',
+            sectionImg: 'soup_shelf.jpg'
           },
           {
-            label: 'The Edit',
-            title: 'Restraint in post-production.',
-            body: 'Processing was kept minimal — skin tones are natural, contrast is gentle, and the edit serves the moment rather than defining it. The goal was invisibility: a grade so subtle the viewer never notices it.',
-            sectionImg: 'silence-edit.jpg'
+            label: 'The Outcome',
+            title: 'Bottom of The Shelf',
+            body: 'As a result of its outdated design, Habitant soup may attract less attention from consumers compared to more modern-looking brands. Its traditional appearance can make the product seem less current, and its placement on the very bottom shelf of the soup aisle further reduces visibility since most shoppers notice products displayed closer to eye level<br><br><em>This photo shows the <strong>botom portion</strong> of the same soup shelf</em>.',
+            sectionImg: 'soup_bottomshelf.jpg'
+          },
+          {
+            label: 'The Redesign',
+            title: 'Introducing A New Look',
+            body: 'To appeal to modern consumers, Habitant soup could introduce a refreshed packaging design that keeps its traditional identity while creating a cleaner and more modern appearance. This updated look would help the product stand out on store shelves and attract more attention from shoppers. <br><br>Modernized the design, though:<br> - Original colours are kept<br> - Original text still incorporated',
+            sectionImg: 'soup_new.png'
+          },
+          {
+            label: 'Project Assets',
+            title: '',
+            body: '',
+            galleryImgs: [
+              'habitant_mockup.png',
+              'soup_shelf.jpg',
+              'soup_bottomshelf.jpg',
+              'soup_new.png',
+              'habitant_logo.png'
+            ]
           }
+          
         ],
         nextCase: 'editorial-layout',
-        nextTitle: 'Editorial Layout System'
+        nextTitle: 'FOCUS Spray Paint'
       },
 
       'editorial-layout': {
-        title: 'Editorial Layout System',
-        coverImg: '',
-        coverLabel: 'Print Design',
+        title: 'FOCUS Spray Paint',
+        coverImg: 'spraypaint_mockup_thumbnail.png',
+        coverLabel: 'Design',
         meta: [
-          { label: 'Year',     value: '2025' },
-          { label: 'Client',   value: 'Independent Magazine' },
-          { label: 'Category', value: 'Design · Print' }
+          { label: 'Year',     value: '2023' },
+          { label: 'Client',   value: 'Independent Project' },
+          { label: 'Category', value: 'Digital Work · Design' }
         ],
-        overview: 'Grid-based layout series designed for an independent magazine — a rigorous system that brings order to long-form editorial content.',
+        overview: 'Focus Spray Paint is a conceptual spray paint brand inspired by graffiti culture, combining bold typography, colour, and packaging into a modern visual identity.',
         roles: ['Layout Design', 'Art Direction', 'Typography'],
-        tools: ['InDesign', 'Illustrator', 'Figma'],
+        tools: ['Illustrator', 'Photoshop', 'InDesign', 'Drawing Pad'],
         sections: [
           {
-            label: 'The System',
-            title: 'A grid that holds everything.',
-            body: 'The layout system is built on a 12-column grid with 4 defined layout variants — allowing the editorial team to compose pages quickly without sacrificing visual consistency across every issue.',
-            sectionImg: 'editorial-system.jpg'
+            label: 'The Reasoning',
+            title: 'A Unique Art Medium.',
+            body: 'Being surrounded by graffiti art my whole life, I’ve always been inspired by the creativity, energy, and culture behind spray paint. Focus Spray Paint was created to capture that inspiration through a bold, modern spray can design rooted in street art culture.',
+            sectionImg: 'spraypaint_mockupHERO.png'
           },
           {
             label: 'Typography',
             title: 'Hierarchy through type.',
-            body: 'A display serif handles headlines at expressive sizes while a small grotesque manages body copy and captions. The pairing is deliberate: warmth in display, legibility in text, contrast between the two.',
-            sectionImg: 'editorial-typography.jpg'
+            body: 'The typography was hand-drawn to reflect the personality of each spray paint colour. Every colour name uses a unique lettering style inspired by the tone, energy, and mood of the paint itself, helping each can feel expressive and connected to graffiti culture.',
+            sectionImg: 'spraypaint_offwhiteNAME.png'
+          },
+          {
+            label: '',
+            title: '',
+            body: '<br>',
+            sectionImg: 'spraypaint_pinkNAME.png'
+          },
+          {
+            label: 'Logo / Brand Identity',
+            title: 'FOCUS',
+            body: 'The branding for Focus Spray Paint was designed to feel bold, energetic, and expressive while still remaining clean and recognizable. Inspired by graffiti tags and street culture, the identity combines raw creativity with a modern visual system that stands out on shelves and in digital applications.',
+            sectionImg: 'spraypaint_focusbrand.png'
+          },
+          {
+            label: '',
+            title: 'Challenges',
+            body: 'The main challenge I ran into was developing the identity of a spray paint brand that felt authentically created by graffiti artists rather than a traditional corporate paint company. The design needed to capture the raw energy and creativity of street art while still maintaining a strong, modern brand identity that could stand out through packaging and typography.<br><br>As a result, research was conducted into graffiti culture and typography, studying different lettering styles, tags, and mural work to better understand the visual language used by graffiti artists. This research helped influence the expressive hand-drawn typography and overall identity of the brand.',
+            sectionImg: 'spraypaint_focusSKETCH.png'
+          },
+          {
+            label: 'Project Assets',
+            title: '',
+            body: '',
+            galleryImgs: [
+              'spraypaint_mockup_thumbnail.png',
+              'spraypaint_mockupHERO.png',
+              'spraypaint_collage.png',
+              'spraypaint_whiteLABEL.png',
+              'spraypaint_pinkLABEL.png',
+              'spraypaint_offwhiteNAME.png',
+              'spraypaint_pinkNAME.png',
+              'spraypaint_focusbrand.png',
+              'spraypaint_focusSKETCH.png',
+              'spraypaint_barcode.png'
+
+            ]
           }
         ],
         nextCase: 'archive-platform',
-        nextTitle: 'Archive Web Platform'
+        nextTitle: 'Spirit Energy Drink'
       },
 
       'archive-platform': {
-        title: 'Archive Web Platform',
-        coverImg: '',
-        coverLabel: 'Full Stack',
+        title: 'Spirit Energy Drink',
+        coverImg: 'drink_mockup.png',
+        coverLabel: 'Design',
         meta: [
-          { label: 'Year',     value: '2024' },
-          { label: 'Stack',    value: 'Node + PostgreSQL' },
-          { label: 'Category', value: 'Directing · Full Stack' }
+          { label: 'Year',     value: '2023' },
+          { label: 'Client',    value: 'Independent Project' },
+          { label: 'Category', value: 'Digital Work · Design' }
         ],
         overview: 'A content archive platform with full-text search, tag filtering, and a headless CMS backend — built for a cultural organisation.',
-        roles: ['Full Stack Dev', 'System Design', 'UI Design'],
-        tools: ['Node.js', 'PostgreSQL', 'React', 'Sanity CMS'],
+        roles: ['Layout Design', 'Art Direction', 'Typography'],
+        tools: ['Illustrator', 'Photoshop', 'InDesign'],
         sections: [
           {
-            label: 'The Brief',
+            label: 'About',
             title: 'Making a decade of content findable.',
             body: 'The client had 10 years of articles, events, and media with no coherent search or categorisation. The platform was built to surface this content through full-text search, tag filtering, and date-based browsing.',
-            sectionImg: 'archive-brief.jpg'
+            sectionImg: 'drink_mockupHERO.png'
           },
           {
             label: 'The Architecture',
             title: 'Headless and fast.',
             body: 'Content is managed in Sanity CMS and served via a custom Node.js API layer to a React frontend. PostgreSQL handles full-text indexing server-side. The result is sub-200ms search response times across 4,000+ records.',
             sectionImg: 'archive-architecture.jpg'
-          }
+          },
         ],
         nextCase: 'brand-identity',
-        nextTitle: 'Monochrome Brand System'
+        nextTitle: 'All-In-One Campus App'
       }
     };
 
